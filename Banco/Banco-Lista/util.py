@@ -7,6 +7,15 @@ def entrar_inteiro(msg):
             print("Erro: valor inválido")
     return num
 
+def entrar_real(msg):
+    while True:
+        try:
+            num = float(input(msg))
+            break
+        except:
+            print("Erro: Valoar inválido")
+    return num
+
 def entrar_id():
     while (True):
         id = entrar_inteiro("Entre com o id da conta: ")
@@ -27,7 +36,7 @@ def entrar_nome():
 
 def entrar_saldo():
     while (True):
-        saldo = float(input("Entre com o saldo: "))
+        saldo = entrar_real("Entre com o saldo: ")
         if (saldo < 0):
             print("Erro: saldo menor do que zero")
         else:
@@ -74,7 +83,7 @@ def entrar_oper():
 def entrar_valor():
     valor = 0
     while True:
-        valor = float(input("Entre com o valor: "))
+        valor = entrar_real("Entre com o valor: ")
         if valor > 0:
             break
     return valor
