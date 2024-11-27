@@ -1,40 +1,37 @@
 from util import *
 from models import *
+from crud_db import *
 
-def consultar_contas(contas):
+def consultar_contas():
+    contas = consultar_contas_db()
     for conta in contas:
         print(conta)
 
-def consultar_conta(contas):
+def consultar_conta():
     id = entrar_id()
-    conta = pesquisar_id(contas, id)
+    conta = consultar_conta_db(id)
     if (not conta):
         print("Erro: conta não existe")
         return
     print(conta)
     
-def incluir_conta(contas):
-    id = entrar_id()
-    conta = pesquisar_id(contas, id)
-    if (conta):  #(conta != []):
-        print("Erro: conta já existe")
-        return
+def incluir_conta():
     nome = entrar_nome()
     saldo = entrar_saldo()
     conta = Conta(id, nome, saldo)
-    contas.append(conta)
+    incluir_conta_db(conta)
 
-def excluir_conta(contas):
+def excluir_conta():
     id = entrar_id()
-    conta = pesquisar_id(contas, id)
+    conta = consultar_conta_db(id)
     if (not conta):
         print("Erro: conta não existe")
         return
-    contas.remove(conta)
+    excluir_conta_db(conta)
 
-def alterar_conta(contas):
+def alterar_conta():
     id = entrar_id()
-    conta = pesquisar_id(contas, id)
+    conta = consultar_conta_db(id)
     if (not conta):
         print("Erro: conta não existe")
         return
@@ -44,3 +41,4 @@ def alterar_conta(contas):
         conta.creditar(valor)
     else:
         conta.debitar(valor)
+    alterar_conta_db(conta)

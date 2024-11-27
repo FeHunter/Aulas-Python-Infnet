@@ -60,11 +60,3 @@ def entrar_valor():
         else:
             break
     return valor
-
-def pesquisar_id(contas, id):
-    conta_pesquisada = []
-    for conta in contas:
-        if (conta.id == id):
-            conta_pesquisada = conta
-            break
-    return conta_pesquisada
