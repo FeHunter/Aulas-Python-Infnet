@@ -1,0 +1,22 @@
+[
+    {
+        "nome": "Patrick",
+        "media": 7.8,
+        "status": "Aprovado"
+    },
+    {
+        "nome": "Felipe",
+        "media": 8.0,
+        "status": "Aprovado"
+    },
+    {
+        "nome": "Rafael",
+        "media": 7.2,
+        "status": "Aprovado"
+    },
+    {
+        "nome": "LP",
+        "media": 5.8,
+        "status": "Prova final"
+    }
+]

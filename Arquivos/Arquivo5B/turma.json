@@ -1,0 +1,18 @@
+[
+    {
+        "nome": "Patrick",
+        "notas": [7.5, 8]
+    },
+    {
+        "nome": "Felipe",
+        "notas": [7.5, 8.5]
+    },
+    {
+        "nome": "Rafael",
+        "notas": [7.5, 7]
+    },
+    {
+        "nome": "LP",
+        "notas": [5.5, 6]
+    }
+]
