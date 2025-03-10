@@ -1,0 +1,12 @@
+drop database if exists banco;
+create database banco;
+use banco;
+create table conta(
+    id int primary key auto_increment,
+    nome varchar(50) not null,
+    saldo real not null
+);
+insert into conta (nome, saldo) values ("LP", 100);
+insert into conta (nome, saldo) values ("Felipe", 200);
+insert into conta (nome, saldo) values ("Patrick", 300);
+insert into conta (nome, saldo) values ("Rafael", 400);
