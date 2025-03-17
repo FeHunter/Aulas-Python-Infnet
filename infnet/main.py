@@ -1,14 +1,7 @@
-from conectar_db import *
-from models import *
+from crud import *
 
-aluno = Aluno("Felipe")
-aluno.endereco = Endereco("Rua Barueri")
-
-try:
-    session = conectar()
-    session.add(aluno)
-    session.commit()
-except Exception as ex:
-    print(ex)
-
-
+# adicionar_aluno_endereco()
+# incluir_emails()
+# incluir_disciplina()
+# consultar_alunos()
+consultar_disciplinas()

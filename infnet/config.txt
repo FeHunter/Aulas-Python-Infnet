@@ -3,4 +3,4 @@ username = root
 password = hunter
 host = localhost
 port = 3306
-database = turma
+database = infnet
