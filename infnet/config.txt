@@ -1,6 +1,6 @@
 [DB]
 username = root
-password = hunter
+password = lpmaia
 host = localhost
 port = 3306
 database = infnet

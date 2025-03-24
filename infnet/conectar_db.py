@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
-import os, configparser
 from sqlalchemy.orm import sessionmaker
+import os, configparser
 
 CONFIG = "config.txt"
 
@@ -14,6 +14,7 @@ def ler_config():
 def conectar():
     try:
         params = ler_config()
+        #engine = create_engine("mysql+pymysql://root:lpmaia@localhost/infnet", echo=True)
         engine = create_engine("mysql+pymysql://{user}:{pw}@{host}/{db}"
                                .format(user=params.get("DB", "username"),
                                        pw=params.get("DB", "password"),
